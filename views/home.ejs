@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
+    <link rel="stylesheet" href="/stylesheets/home.css" />
+    <link rel="stylesheet" href="/stylesheets/navBar.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.15.2/css/all.css"
+    />
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-navigation">
+        <ul class="list-navigation">
+          <a href="/" class="link-navigation">Acceuil</a>
+          <a href="/users" class="link-navigation">Users</a>
+          <a href="#" class="link-navigation">Home</a>
+        </ul>
+        <div class="information-content">
+          <div class="profil-dropdown">
+            <div class="logo dropdown">
+              <img
+                src="/images/e.png"
+                id="logo-profile"
+                alt="profil"
+                class="image-profil"
+              />
+            </div>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#">Profil</a>
+              <a href="#">Add Post</a>
+              <a href="#">Contact</a>
+            </div>
+          </div>
+          <a href="#" class="notification"><i class="fal fa-bell notif"></i></a>
+        </div>
+      </nav>
+    </header>
+    <main class="main-content">
+      <section class="icon-link-section">
+        <i class="fal icon-fa fa-user-plus"></i>
+        <i class="fal icon-fa fa-comment-alt-plus"></i>
+        <i class="fal icon-fa fa-envelope"></i>
+        <i class="fal icon-fa fa-search"></i>
+        <i class="fal icon-fa fa-cog"></i>
+      </section>
+      <section class="content-section">
+        <div class="box-content">
+          <div class="box-column1 box-col">
+            <div class="image-head-box">
+              <img src="/images/e.png" alt="profil" class="image-head" />
+            </div>
+          </div>
+          <div class="box-column2 box-col">
+            <div class="header-box box-row">
+              <h1>UserName</h1>
+              <p>The Lorem Ipsum caractere</p>
+            </div>
+            <div class="main-box box-row">
+              <div class="image-main-box">
+                <img src="/images/mm.png" alt="profil" class="image-main" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="/javascripts/handleProfil.js" type="module"></script>
+  </body>
+</html>

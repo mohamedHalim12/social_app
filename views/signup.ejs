@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sing up</title>
+    <link rel="stylesheet" href="/stylesheets/navBar.css" />
+    <link rel="stylesheet" href="/stylesheets/signup.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="main-navigation">
+        <ul class="list-navigation">
+          <a href="/" class="link-navigation">Acceuil</a>
+          <a href="/users" class="link-navigation">Users</a>
+          <a href="/home" class="link-navigation">Home</a>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-content">
+      <div class="signup-wrapper">
+        <form class="signup-form">
+          <div class="signup-item">
+            <h1 class="signup-title">Create account</h1>
+          </div>
+          <div class="signup-item">
+            <label class="signup-label" for="firstname">First Name</label>
+            <input type="text" id="firstname" class="signup-input" />
+          </div>
+          <div class="signup-item">
+            <label class="signup-label" for="lastname">Last Name</label>
+            <input type="text" id="lastname" class="signup-input" />
+          </div>
+          <div class="signup-item">
+            <label class="signup-label" for="username">username</label>
+            <input type="text" id="username" class="signup-input" />
+          </div>
+
+          <div class="signup-item">
+            <label class="signup-label" for="signup-email">Email</label>
+            <input type="email" id="signup-email" class="signup-input" />
+          </div>
+          <div class="signup-item">
+            <label class="signup-label" for="signup-password"
+              >Creat password</label
+            >
+            <input type="password" id="signup-password" class="signup-input" />
+          </div>
+          <div class="signup-item">
+            <label class="signup-label" for="signup-password-confirm"
+              >Confirm password</label
+            >
+            <input
+              type="text"
+              id="signup-password-confirm"
+              class="signup-input"
+            />
+          </div>
+          <div class="signup-item">
+            <button type="submit" class="signup-button">Create</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

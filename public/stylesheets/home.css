@@ -1,0 +1,97 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+.main-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 1em;
+}
+.icon-link-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 15%;
+  height: 100%;
+  gap: 3em;
+  margin-top: 4px;
+  border-right: 1px solid black;
+  margin-right: 0;
+}
+.icon-fa {
+  font-size: 2.5rem;
+  padding: 0.7rem;
+  /* border-radius: 50%; */
+}
+.icon-fa:hover {
+  background-color: rgb(228, 235, 222);
+  border-radius: 50%;
+}
+.content-section {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  margin-left: 0;
+}
+.box-content {
+  display: flex;
+  width: 25rem;
+  height: 25rem;
+  border: 1px solid black;
+}
+.box-column1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: aquamarine;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.box-col,
+.box-row {
+  flex: 1;
+}
+.image-head-box {
+  width: 3.3rem;
+  height: 3.3rem;
+  clip-path: circle(50% at 50% 50%);
+}
+.image-head {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.box-column2 {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 5;
+  background-color: rgb(197, 125, 140);
+}
+.header-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3em;
+}
+
+.main-box {
+  flex-grow: 3;
+  margin-top: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-main-box {
+  width: 90%;
+  height: 95%;
+}
+.image-main {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5%;
+}

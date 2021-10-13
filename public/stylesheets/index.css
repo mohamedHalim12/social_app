@@ -1,0 +1,80 @@
+.root {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: fit-content(1rem) auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main-content {
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(189, 214, 206);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden auto;
+}
+
+.content-wrapper {
+  background-color: yellow;
+  overflow: auto;
+}
+.video_content {
+  width: 100%;
+  height: 26rem;
+  display: flex;
+  background-color: blue;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  object-fit: cover;
+}
+
+.footer-content {
+  display: flex;
+  padding: 1rem;
+}
+.titile-wrap {
+  /* background-color: red; */
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 9px;
+}
+/* footer */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.8em;
+}
+.icon-footer {
+  font-size: 2em;
+}
+.list-inline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.8em;
+}

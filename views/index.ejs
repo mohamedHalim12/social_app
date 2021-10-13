@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/navBar.css" />
+    <link rel="stylesheet" href="/stylesheets/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.15.2/css/all.css"
+    />
+  </head>
+  <body>
+    <div class="root">
+      <header class="main-header">
+        <nav class="main-navigation">
+          <ul class="list-navigation">
+            <li> <a href="#" class="link-navigation">Acceuil</a> </li>
+            <li> <a href="/users" class="link-navigation">Users</a></li>
+            <li> <a href="/home" class="link-navigation">Home</a></li>
+          </ul>
+          <div class="connect-in-up">
+            <a href="/sign_in" class="link-navigation link-signin">Sign in</a>
+            <a href="/sign_up" class="link-navigation link-signup">sign up</a>
+          </div>
+        </nav>
+      </header>
+      <main class="main-content">
+        <div class="titile-wrap">
+          <h1><%= title %></h1>
+          <p>App for posting, like and comment</p>
+        </div>
+        <div class="video_content">
+          <video width="640" height="480" autoplay muted loop>
+            <source src="/images/video_like.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <footer class="footer-content">
+          <div class="social">
+            <a href="#"><i class="fab icon-footer fa-instagram"></i></i></a>
+            <a href="#"><i class="fab icon-footer fa-twitter"></i></a>
+            <a href="#"><i class="fab icon-footer fa-facebook"></i></i></a>
+            <a href="#"><i class="fab icon-footer fa-whatsapp"></i></a>
+          </div>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Home</a></li>
+            <li class="list-inline-item"><a href="#">Services</a></li>
+            <li class="list-inline-item"><a href="#">About</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+          </ul>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
