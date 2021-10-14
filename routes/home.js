@@ -7,6 +7,9 @@ router.get("/", function (req, res, next) {
 router.get("/add_news", function (req, res, next) {
   res.render("addNews");
 });
+router.get("/add_post", function (req, res, next) {
+  res.render("addPost");
+});
 router.get("/users", function (req, res, next) {
   res.render("users");
 });

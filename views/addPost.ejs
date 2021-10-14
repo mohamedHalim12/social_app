@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Post</title>
+    <link rel="stylesheet" href="/stylesheets/navBar.css" />
+    <link rel="stylesheet" href="/stylesheets/addPost.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.15.2/css/all.css"
+    />
+  </head>
+  <body>
+    <div class="root-body">
+      <header class="main-header">
+        <nav class="main-navigation">
+          <ul class="list-navigation">
+            <a href="/" class="link-navigation">Acceuil</a>
+            <a href="/users" class="link-navigation">Users</a>
+            <a href="/home" class="link-navigation">Home</a>
+          </ul>
+          <div class="information-content">
+            <div class="profil-dropdown">
+              <div class="logo dropdown">
+                <img
+                  src="/images/e.png"
+                  id="logo-profile"
+                  alt="profil"
+                  class="image-profil"
+                />
+              </div>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="#">Profil</a>
+                <a href="#">Add Post</a>
+                <a href="#">Contact</a>
+              </div>
+            </div>
+            <a href="#" class="notification"
+              ><i class="fal fa-bell notif"></i
+            ></a>
+          </div>
+        </nav>
+      </header>
+      <main class="main-content">
+        <div class="post-form-wrapper">
+          <form class="form-add-post">
+            <div class="form-post-row f-p-r1">
+              <label for="title" class="form-post-label"><h1>Title</h1></label>
+              <input type="text" class="form-post-input" id="title" />
+            </div>
+            <div class="form-post-row f-p-r2">
+              <label for="information" class="form-post-label"
+                ><h1>Information</h1></label
+              >
+              <textarea class="form-post-area" id="information"></textarea>
+            </div>
+            <div class="form-post-row f-p-r3">
+              <label for="post-img" class="form-post-label"
+                ><h1>get Image</h1></label
+              >
+              <input type="file" class="form-post-image" id="post-img" />
+            </div>
+            <div class="form-post-row f-p-r4">
+              <button type="submit" class="btn-submit"> Post it</button>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+    <script src="/javascripts/handleProfil.js" type="module"></script>
+  </body>
+</html>

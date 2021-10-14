@@ -8,6 +8,7 @@ router.get("/", function (req, res, next) {
 router.get("/sign_in", function (req, res, next) {
   res.render("signin");
 });
+
 router.get("/sign_up", function (req, res, next) {
   res.render("signup");
 });

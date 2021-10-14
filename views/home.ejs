@@ -13,62 +13,95 @@
     />
   </head>
   <body>
-    <header class="main-header">
-      <nav class="main-navigation">
-        <ul class="list-navigation">
-          <a href="/" class="link-navigation">Acceuil</a>
-          <a href="/users" class="link-navigation">Users</a>
-          <a href="#" class="link-navigation">Home</a>
-        </ul>
-        <div class="information-content">
-          <div class="profil-dropdown">
-            <div class="logo dropdown">
-              <img
-                src="/images/e.png"
-                id="logo-profile"
-                alt="profil"
-                class="image-profil"
-              />
+    <div class="root-body">
+      <header class="main-header">
+        <nav class="main-navigation">
+          <ul class="list-navigation">
+            <a href="/" class="link-navigation">Acceuil</a>
+            <a href="/users" class="link-navigation">Users</a>
+            <a href="#" class="link-navigation">Home</a>
+          </ul>
+          <div class="information-content">
+            <div class="profil-dropdown">
+              <div class="logo dropdown">
+                <img
+                  src="/images/e.png"
+                  id="logo-profile"
+                  alt="profil"
+                  class="image-profil"
+                />
+              </div>
+              <div id="myDropdown" class="dropdown-content">
+                <a href="#">Profil</a>
+                <a href="#">Add Post</a>
+                <a href="#">Contact</a>
+              </div>
             </div>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="#">Profil</a>
-              <a href="#">Add Post</a>
-              <a href="#">Contact</a>
-            </div>
+            <a href="#" class="notification"
+              ><i class="fal fa-bell notif"></i
+            ></a>
           </div>
-          <a href="#" class="notification"><i class="fal fa-bell notif"></i></a>
-        </div>
-      </nav>
-    </header>
-    <main class="main-content">
-      <section class="icon-link-section">
-        <i class="fal icon-fa fa-user-plus"></i>
-        <i class="fal icon-fa fa-comment-alt-plus"></i>
-        <i class="fal icon-fa fa-envelope"></i>
-        <i class="fal icon-fa fa-search"></i>
-        <i class="fal icon-fa fa-cog"></i>
-      </section>
-      <section class="content-section">
-        <div class="box-content">
-          <div class="box-column1 box-col">
-            <div class="image-head-box">
-              <img src="/images/e.png" alt="profil" class="image-head" />
+        </nav>
+      </header>
+      <main class="main-content">
+        <section class="icon-link-section">
+          <a href="#"><i class="fal icon-fa fa-user-plus"></i></a>
+          <a href="/home/add_post"
+            ><i class="fal icon-fa i-f1 fa-comment-alt-plus"></i
+          ></a>
+          <a href="#"><i class="fal icon-fa fa-envelope"></i></a>
+          <a href="#"><i class="fal icon-fa fa-search"></i></a>
+          <a href="#"><i class="fal icon-fa fa-cog"></i></a>
+        </section>
+        <section class="content-section">
+          <div class="box-wrapper">
+            <div class="box-content">
+              <div class="box-column1 box-col">
+                <div class="image-head-box">
+                  <img src="/images/e.png" alt="profil" class="image-head" />
+                </div>
+              </div>
+              <div class="box-column2 box-col">
+                <div class="header-box box-row">
+                  <h1>UserName</h1>
+                  <p>The Lorem Ipsum caractere</p>
+                </div>
+                <div class="main-box box-row">
+                  <div class="image-main-box">
+                    <img src="/images/mm.png" alt="profil" class="image-main" />
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="box-column2 box-col">
-            <div class="header-box box-row">
-              <h1>UserName</h1>
-              <p>The Lorem Ipsum caractere</p>
-            </div>
-            <div class="main-box box-row">
-              <div class="image-main-box">
-                <img src="/images/mm.png" alt="profil" class="image-main" />
+            <div class="box-comment-wrapper">
+              <div class="box-like-row">
+                <i class="fad fa-like-icon fa-thumbs-up"></i>
+                <i class="fad fa-like-icon fa-heart"></i>
+                <i class="fad fa-like-icon fa-meh-blank"></i>
+                <i class="fad fa-like-icon fa-thumbs-down"></i>
+                <i class="fad fa-like-icon fa-heart-broken"></i>
+              </div>
+              <div class="box-comment-form">
+                <form class="form-comment">
+                  <input
+                    type="text"
+                    class="comment-input"
+                    placeholder="Your comment ..."
+                  />
+                  <button type="submit" class="comment-button">Post it</button>
+                </form>
+              </div>
+              <div class="box-comment-list">
+                <ul class="list-of-comment">
+                  <li class="comment-row">first comment</li>
+                  <li class="comment-row">second comment</li>
+                </ul>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </div>
     <script src="/javascripts/handleProfil.js" type="module"></script>
   </body>
 </html>

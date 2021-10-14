@@ -1,0 +1,99 @@
+body,
+html {
+  width: 100%;
+  height: 100%;
+
+  background-image: linear-gradient(to bottom right, red, pink, yellow, green);
+}
+body {
+  display: flex;
+  justify-content: center;
+}
+.root-body {
+  width: 100%;
+  height: 100%;
+  max-width: 950px;
+  border: 1px solid black;
+  overflow: hidden;
+}
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 50%;
+}
+.post-form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 100%;
+}
+.form-add-post {
+  /* background-color: rgb(197, 133, 133); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* width: 100%; */
+  flex: 1;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(93, 60, 211),
+    rgb(24, 189, 139),
+    rgb(22, 104, 104),
+    rgb(59, 95, 30)
+  );
+  border: 2px solid rgb(105, 175, 137);
+  border-style: solid;
+  box-shadow: 5px 5px 5px grey;
+  gap: 2em;
+}
+.form-post-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.f-p-r1 {
+  flex-grow: 2;
+}
+.f-p-r2 {
+  flex-grow: 4;
+}
+.f-p-r1 {
+  flex-grow: 1;
+}
+.form-post-input {
+  /* flex: 1; */
+  padding: 5px;
+  border-radius: 6px;
+  background-color: rgb(208, 226, 226);
+}
+.form-post-area {
+  flex: 1;
+  padding: 40px;
+  border-radius: 6px;
+  width: 100%;
+  background-color: rgb(208, 226, 226);
+}
+.form-post-image {
+  padding: 5px;
+  width: 70%;
+}
+h1 {
+  font-size: 15px;
+  color: white;
+}
+.btn-submit {
+  background-color: rgb(152, 168, 92);
+  padding: 10px;
+  border-radius: 16px;
+  cursor: pointer;
+  margin-bottom: 3px;
+}
+.btn-submit:hover {
+  background-color: rgb(130, 226, 134);
+}
