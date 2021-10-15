@@ -3,12 +3,20 @@ var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
+const mongoose = require("mongoose");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var homeRouter = require("./routes/home");
 
 var app = express();
+mongoose
+  .connect(
+    "mongodb+srv://halim_12:cBk6eAM56TCurW5@socialapp.1vfqj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    { useNewUrlParser: true, useUnifiedTopology: true },
+  )
+  .then(() => console.log("Connexion à MongoDB réussie !"))
+  .catch(() => console.log("Connexion à MongoDB échouée !"));
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));

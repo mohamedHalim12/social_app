@@ -45,22 +45,32 @@
       </header>
       <main class="main-content">
         <div class="post-form-wrapper">
-          <form class="form-add-post">
+          <form
+            class="form-add-post"
+            id="post-form-id"
+            action="/home/add_post"
+            method="POST"
+          >
             <div class="form-post-row f-p-r1">
               <label for="title" class="form-post-label"><h1>Title</h1></label>
-              <input type="text" class="form-post-input" id="title" />
+              <input
+                type="text"
+                name="title"
+                class="form-post-input"
+                id="title"
+                required
+              />
             </div>
             <div class="form-post-row f-p-r2">
               <label for="information" class="form-post-label"
                 ><h1>Information</h1></label
               >
-              <textarea class="form-post-area" id="information"></textarea>
-            </div>
-            <div class="form-post-row f-p-r3">
-              <label for="post-img" class="form-post-label"
-                ><h1>get Image</h1></label
-              >
-              <input type="file" class="form-post-image" id="post-img" />
+              <textarea
+                class="form-post-area"
+                name="information"
+                id="information"
+                required
+              ></textarea>
             </div>
             <div class="form-post-row f-p-r4">
               <button type="submit" class="btn-submit"> Post it</button>
@@ -69,6 +79,7 @@
         </div>
       </main>
     </div>
+    <!-- <script src="/javascripts/sendForm.js" type="module"></script> -->
     <script src="/javascripts/handleProfil.js" type="module"></script>
   </body>
 </html>

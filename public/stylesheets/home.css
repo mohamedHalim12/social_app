@@ -2,13 +2,14 @@ body,
 html {
   width: 100%;
   height: 100%;
+  background-image: linear-gradient(to bottom right, red, pink, yellow, green);
 }
 body {
   display: flex;
   justify-content: center;
 }
 .root-body {
-  max-width: 950px;
+  max-width: 550px;
   border: 1px solid black;
   overflow: hidden;
 }
@@ -20,26 +21,30 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: white;
 }
 .icon-link-section {
   display: flex;
   justify-content: center;
   width: 100%;
   gap: 2em;
-  overflow-x: auto;
-  margin-top: 4px;
+  overflow-x: hidden;
+  overflow-y: hidden;
   margin-bottom: 7px;
-  border-bottom: 1px solid black;
+  padding-bottom: 2px;
+  /* border-bottom: 1px solid black; */
+  background-color: rgb(75, 82, 88);
   /* margin-right: 0; */
 }
 .icon-fa {
   font-size: 2.4rem;
   padding: 0.1rem;
   cursor: pointer;
+  color: white;
 }
 .icon-fa:hover {
   background-color: rgb(228, 235, 222);
-  border-radius: 50%;
+  border-radius: 30%;
   color: black;
 }
 .content-section {
@@ -57,26 +62,30 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  margin-bottom: 1.3rem;
+  box-shadow: 0 0 5px #888888;
 }
 .box-content {
   display: flex;
   width: 100%;
-  height: 23rem;
+  min-height: 19rem;
   border-bottom: 1px solid black;
+  background-color: aliceblue;
 }
 .box-column1 {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background-color: rgb(224, 224, 224);
-  margin-left: 0.5rem;
-  margin-right: 0;
+  /* background-color: rgb(224, 224, 224); */
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
   width: 3.3rem;
+  /* border-right: 1px solid black; */
 }
 .i-f1 {
-  background-color: rgb(68, 68, 122);
+  background-color: rgb(107, 107, 189);
   color: white;
-  border-radius: 50%;
+  border-radius: 20%;
 }
 .i-f1:hover {
   color: black;
@@ -101,39 +110,45 @@ body {
   display: flex;
   flex-direction: column;
   flex-grow: 5;
-  background-color: rgb(223, 199, 204);
+  /* background-color: rgb(223, 199, 204); */
   margin-right: 0.5em;
 }
 .header-box {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.3em;
+  gap: 0.6em;
+  margin-bottom: 0.5rem;
 }
-
+.fas-badge {
+  color: blue;
+}
+.article-content-row {
+  display: flex;
+  flex-direction: column;
+}
 .main-box {
   flex-grow: 3;
   margin-top: 0.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgb(224, 224, 224);
+  border-radius: 12px;
+  margin-bottom: 7px;
 }
-.image-main-box {
-  width: 90%;
-  height: 95%;
-}
-.image-main {
+.article-main-box {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 5%;
+  text-align: center;
 }
+
 .box-comment-wrapper {
   display: flex;
   flex-direction: column;
-  background-color: aliceblue;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  background-color: rgb(184, 250, 236);
+
+  margin-bottom: 0.2rem;
 }
 .box-like-row {
   display: flex;
@@ -145,19 +160,21 @@ body {
   font-size: 1.7rem;
   padding: 0.7rem;
   cursor: pointer;
-  color: rgb(140, 141, 163);
+  color: black;
 }
 .fa-like-icon:hover {
-  color: darkcyan;
+  color: rgb(255, 0, 55);
 }
 .box-comment-form {
   display: flex;
-  width: 100%;
+  width: 96%;
+  justify-content: center;
+  align-items: center;
 }
 .form-comment {
   flex: 1;
   display: flex;
-  gap: 0.3;
+  gap: 0.3px;
   align-items: center;
 }
 .comment-input {
