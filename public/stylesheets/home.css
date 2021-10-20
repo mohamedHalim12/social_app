@@ -9,7 +9,7 @@ body {
   justify-content: center;
 }
 .root-body {
-  max-width: 550px;
+  max-width: 700px;
   border: 1px solid black;
   overflow: hidden;
 }
@@ -68,7 +68,7 @@ body {
 .box-content {
   display: flex;
   width: 100%;
-  min-height: 19rem;
+  min-height: 10rem;
   border-bottom: 1px solid black;
   background-color: aliceblue;
 }

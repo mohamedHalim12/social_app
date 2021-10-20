@@ -53,6 +53,7 @@
           <a href="#"><i class="fal icon-fa fa-cog"></i></a>
         </section>
         <section class="content-section">
+          <% posts.forEach(function(post){ %>
           <div class="box-wrapper">
             <div class="box-content">
               <div class="box-column1 box-col">
@@ -63,21 +64,16 @@
               <div class="box-column2 box-col">
                 <div class="header-box box-row">
                   <div class="user-name-row">
-                    <span>UserName</span>
+                    <span><%= username %></span>
                     <i class="fas fas-badge fa-badge-check"></i>
                   </div>
                   <div class="article-content-row">
-                    <h1>Title of article</h1>
+                    <h1><%= post.title%></h1>
                     <a href="#">Lien du Post</a>
                   </div>
                 </div>
                 <div class="main-box box-row">
-                  <div class="article-main-box">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Autem saepe natus nesciunt ut amet ratione et aut, obcaecati
-                    placeat rerum, excepturi labore animi maxime ea sit
-                    veritatis totam! Eum, et?
-                  </div>
+                  <div class="article-main-box"> <%= post.information%> </div>
                 </div>
               </div>
             </div>
@@ -105,162 +101,7 @@
               </div>
             </div>
           </div>
-          <div class="box-wrapper">
-            <div class="box-content">
-              <div class="box-column1 box-col">
-                <div class="image-head-box">
-                  <img src="/images/e.png" alt="profil" class="image-head" />
-                </div>
-              </div>
-              <div class="box-column2 box-col">
-                <div class="header-box box-row">
-                  <div class="user-name-row">
-                    <span>UserName</span>
-                    <i class="fas fas-badge fa-badge-check"></i>
-                  </div>
-                  <div class="article-content-row">
-                    <h1>Title of article</h1>
-                    <a href="#">Lien du Post</a>
-                  </div>
-                </div>
-                <div class="main-box box-row">
-                  <div class="article-main-box">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Autem saepe natus nesciunt ut amet ratione et aut, obcaecati
-                    placeat rerum, excepturi labore animi maxime ea sit
-                    veritatis totam! Eum, et?
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="box-comment-wrapper">
-              <div class="box-like-row">
-                <i class="fad fa-like-icon fa-thumbs-up"></i>
-                <i class="fad fa-like-icon fa-meh-blank"></i>
-                <i class="fad fa-like-icon fa-thumbs-down"></i>
-              </div>
-              <div class="box-comment-form">
-                <form class="form-comment">
-                  <input
-                    type="text"
-                    class="comment-input"
-                    placeholder="Your comment ..."
-                  />
-                  <button type="submit" class="comment-button">Post it</button>
-                </form>
-              </div>
-              <div class="box-comment-list">
-                <ul class="list-of-comment">
-                  <li class="comment-row">first comment</li>
-                  <li class="comment-row">second comment</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="box-wrapper">
-            <div class="box-content">
-              <div class="box-column1 box-col">
-                <div class="image-head-box">
-                  <img src="/images/e.png" alt="profil" class="image-head" />
-                </div>
-              </div>
-              <div class="box-column2 box-col">
-                <div class="header-box box-row">
-                  <div class="user-name-row">
-                    <span>UserName</span>
-                    <i class="fas fas-badge fa-badge-check"></i>
-                  </div>
-                  <div class="article-content-row">
-                    <h1>Title of article</h1>
-                    <a href="#">Lien du Post</a>
-                  </div>
-                </div>
-                <div class="main-box box-row">
-                  <div class="article-main-box">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Autem saepe natus nesciunt ut amet ratione et aut, obcaecati
-                    placeat rerum, excepturi labore animi maxime ea sit
-                    veritatis totam! Eum, et?
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="box-comment-wrapper">
-              <div class="box-like-row">
-                <i class="fad fa-like-icon fa-thumbs-up"></i>
-                <i class="fad fa-like-icon fa-meh-blank"></i>
-                <i class="fad fa-like-icon fa-thumbs-down"></i>
-              </div>
-              <div class="box-comment-form">
-                <form class="form-comment">
-                  <input
-                    type="text"
-                    class="comment-input"
-                    placeholder="Your comment ..."
-                  />
-                  <button type="submit" class="comment-button">Post it</button>
-                </form>
-              </div>
-              <div class="box-comment-list">
-                <ul class="list-of-comment">
-                  <li class="comment-row">first comment</li>
-                  <li class="comment-row">second comment</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="box-wrapper">
-            <div class="box-content">
-              <div class="box-column1 box-col">
-                <div class="image-head-box">
-                  <img src="/images/e.png" alt="profil" class="image-head" />
-                </div>
-              </div>
-              <div class="box-column2 box-col">
-                <div class="header-box box-row">
-                  <div class="user-name-row">
-                    <span>UserName</span>
-                    <i class="fas fas-badge fa-badge-check"></i>
-                  </div>
-                  <div class="article-content-row">
-                    <h1>Title of article</h1>
-                    <a href="#">Lien du Post</a>
-                  </div>
-                </div>
-                <div class="main-box box-row">
-                  <div class="article-main-box">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Autem saepe natus nesciunt ut amet ratione et aut, obcaecati
-                    placeat rerum, excepturi labore animi maxime ea sit
-                    veritatis totam! Eum, et?
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="box-comment-wrapper">
-              <div class="box-like-row">
-                <i class="fad fa-like-icon fa-thumbs-up"></i>
-                <i class="fad fa-like-icon fa-meh-blank"></i>
-                <i class="fad fa-like-icon fa-thumbs-down"></i>
-              </div>
-              <div class="box-comment-form">
-                <form class="form-comment">
-                  <input
-                    type="text"
-                    class="comment-input"
-                    placeholder="Your comment ..."
-                  />
-                  <button type="submit" class="comment-button">Post it</button>
-                </form>
-              </div>
-              <div class="box-comment-list">
-                <ul class="list-of-comment">
-                  <li class="comment-row">first comment</li>
-                  <li class="comment-row">second comment</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <%}) %>
         </section>
       </main>
     </div>

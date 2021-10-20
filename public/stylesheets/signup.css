@@ -3,12 +3,7 @@ html {
   width: 100%;
   height: 100%;
 }
-.main-content {
-  width: 100%;
-  height: 95%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body {
   background-image: linear-gradient(
     to bottom right,
     rgb(248, 4, 4),
@@ -16,6 +11,13 @@ html {
     rgb(248, 248, 7),
     rgb(3, 122, 3)
   );
+}
+.main-content {
+  width: 100%;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .signup-wrapper {
   width: 60%;

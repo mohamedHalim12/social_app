@@ -3,6 +3,9 @@ html {
   width: 100%;
   height: 100%;
 }
+body {
+  background-image: linear-gradient(to bottom right, red, pink, yellow, green);
+}
 .main-content {
   width: 100%;
   height: 95%;
@@ -10,7 +13,6 @@ html {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  background-image: linear-gradient(to bottom right, red, pink, yellow, green);
 }
 
 @media (min-height: 424px) {

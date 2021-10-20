@@ -20,43 +20,59 @@
     </header>
     <main class="main-content">
       <div class="signup-wrapper">
-        <form class="signup-form">
+        <form class="signup-form" method="POST" action="/sign_up">
           <div class="signup-item">
             <h1 class="signup-title">Create account</h1>
           </div>
           <div class="signup-item">
             <label class="signup-label" for="firstname">First Name</label>
-            <input type="text" id="firstname" class="signup-input" />
+            <input
+              type="text"
+              name="firstname"
+              id="firstname"
+              class="signup-input"
+            />
           </div>
           <div class="signup-item">
             <label class="signup-label" for="lastname">Last Name</label>
-            <input type="text" id="lastname" class="signup-input" />
+            <input
+              type="text"
+              name="lastname"
+              id="lastname"
+              class="signup-input"
+            />
           </div>
           <div class="signup-item">
             <label class="signup-label" for="username">username</label>
-            <input type="text" id="username" class="signup-input" />
+            <input
+              type="text"
+              name="username"
+              id="username"
+              class="signup-input"
+            />
           </div>
 
           <div class="signup-item">
             <label class="signup-label" for="signup-email">Email</label>
-            <input type="email" id="signup-email" class="signup-input" />
+            <input
+              type="email"
+              name="email"
+              id="signup-email"
+              class="signup-input"
+            />
           </div>
           <div class="signup-item">
             <label class="signup-label" for="signup-password"
               >Creat password</label
             >
-            <input type="password" id="signup-password" class="signup-input" />
-          </div>
-          <div class="signup-item">
-            <label class="signup-label" for="signup-password-confirm"
-              >Confirm password</label
-            >
             <input
-              type="text"
-              id="signup-password-confirm"
+              type="password"
+              name="password"
+              id="signup-password"
               class="signup-input"
             />
           </div>
+
           <div class="signup-item">
             <button type="submit" class="signup-button">Create</button>
           </div>

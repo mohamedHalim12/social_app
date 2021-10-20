@@ -1,11 +1,17 @@
 const mongoose = require("mongoose");
+const comment_model = require("./comment_model");
+const post_model = require("./post_model");
+const uniqueValidator = require("mongoose-unique-validator");
 
 const userShema = mongoose.Schema({
-  userName: { type: "string", required: true },
-  firstName: { type: "string", required: true },
-  lastName: { type: "string", required: true },
-  email: { type: "string", required: true },
-  password: { type: "string", required: true },
-});
+  username: { type: "string", required: true, unique: true },
 
+  firstname: { type: "String", required: true },
+  lastname: { type: "String", required: true },
+  email: { type: "string", required: true, unique: true },
+  password: { type: "String", required: true },
+  comments: [{ type: "String", ref: comment_model }],
+  posts: [{ type: "String", ref: post_model }],
+});
+userShema.plugin(uniqueValidator);
 module.exports = mongoose.model("user_model", userShema);
