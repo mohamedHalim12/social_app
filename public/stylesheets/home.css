@@ -211,3 +211,26 @@ body {
   font-weight: bold;
   font-family: "Courier New", Courier, monospace;
 }
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.8em;
+}
+.icon-footer {
+  font-size: 2em;
+}
+.list-inline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.8em;
+}
