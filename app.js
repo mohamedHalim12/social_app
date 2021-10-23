@@ -20,7 +20,7 @@ var app = express();
 
 mongoose
   .connect(
-    "mongodb+srv://halim_12:cBk6eAM56TCurW5@socialapp.1vfqj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    "mongodb+srv://halim_12:e1kohiKFM2rZePpB@like-app-cluster.spn8k.mongodb.net/likeCommentDB?retryWrites=true&w=majority",
     { useNewUrlParser: true, useUnifiedTopology: true },
   )
   .then(() => console.log("Connexion à MongoDB réussie !"))
