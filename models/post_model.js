@@ -9,7 +9,7 @@ const postShema = mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-  comments: [{ type: String, ref: comment_model }],
+  comments: [{ type: mongoose.Schema.Types.ObjectId, ref: "comment_model" }],
 });
 
 module.exports = mongoose.model("post_model", postShema);

@@ -91,6 +91,12 @@
                     placeholder="Your comment ..."
                     name="comment"
                   />
+                  <input
+                    class="hidden-input"
+                    type="text"
+                    name="post_id"
+                    value="<%= post._id%>"
+                  />
                   <button type="submit" class="comment-button">Post it</button>
                 </form>
               </div>
@@ -98,7 +104,10 @@
                 <ul class="list-of-comment">
                   <% if ( post.comments.length > 0) {%>
                   <%post.comments.forEach(function(comment) { %>
-                  <li class="comment-row"> <%=comment%> </li>
+                  <li class="comment-row">
+                    <span class="comment-username"><%=comment.author%>:</span>
+                    <span class="comment-comment"><%=comment.comment%></span>
+                  </li>
                   <%})%> <% } %>
                 </ul>
               </div>

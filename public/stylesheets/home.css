@@ -184,6 +184,9 @@ body {
   margin-right: 3px;
   margin-left: 3px;
 }
+.hidden-input {
+  display: none;
+}
 .comment-button {
   flex: 1;
   padding: 6px;
@@ -198,4 +201,13 @@ body {
 .list-of-comments {
   display: flex;
   flex-direction: column;
+}
+.comment-row {
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+}
+.comment-username {
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace;
 }

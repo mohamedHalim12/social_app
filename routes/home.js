@@ -8,12 +8,20 @@ const jwt = require("jsonwebtoken");
 var cookie = require("cookie");
 
 router.get("/", async function (req, res, next) {
-  let post = await post_model
+  /*  let post = await post_model
     .find()
     .sort({ date: -1 })
     .populate({ path: "author", select: "username -_id" })
+    .exec(); */
+
+  let postComment = await post_model
+    .find()
+    .sort({ date: -1 })
+    .populate({ path: "author", select: "username -_id" })
+    .populate({ path: "comments" })
     .exec();
-  res.render("home", { posts: post });
+
+  res.render("home", { posts: postComment });
 });
 router.get("/data-base", function (req, res, next) {
   // res.render("dataBase");
@@ -46,16 +54,22 @@ router.post("/comment", async function (req, res, next) {
   const token = JSON.parse(cookie.parse(req.headers.cookie).token).jwt;
   const decodedToken = jwt.verify(token, "RANDOM_TOKEN_SECRET");
   let userId = decodedToken.userId;
+  let userIdName = await user_model
+    .findById(userId)
+    .select("username -_id")
+    .exec();
+
   const comment = await comment_model.create({
-    author: userId,
+    author: userIdName.username,
     comment: req.body.comment,
     date: Date.now(),
   });
-  let addCommentToPost = await post_model.findOneAndUpdate(
-    { author: userId },
-    { $push: { comments: req.body.comment } },
+  let addCommentToPost = await post_model.findByIdAndUpdate(
+    req.body.post_id,
+    { $push: { comments: comment._id } },
     { new: true },
   );
+
   res.status(200).redirect("/home");
 });
 

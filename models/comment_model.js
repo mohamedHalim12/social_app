@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const reaction_model = require("./reaction_model");
 
 const commentShema = mongoose.Schema({
-  author: { type: mongoose.Schema.Types.ObjectId, required: true },
+  author: { type: String, required: true },
   comment: { type: "String", required: true },
   date: Date,
   reaction: {
