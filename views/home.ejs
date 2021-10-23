@@ -64,7 +64,7 @@
               <div class="box-column2 box-col">
                 <div class="header-box box-row">
                   <div class="user-name-row">
-                    <span><%= username %></span>
+                    <span><%= post.author.username %></span>
                     <i class="fas fas-badge fa-badge-check"></i>
                   </div>
                   <div class="article-content-row">
@@ -84,19 +84,22 @@
                 <i class="fad fa-like-icon fa-thumbs-down"></i>
               </div>
               <div class="box-comment-form">
-                <form class="form-comment">
+                <form class="form-comment" action="/home/comment" method="POST">
                   <input
                     type="text"
                     class="comment-input"
                     placeholder="Your comment ..."
+                    name="comment"
                   />
                   <button type="submit" class="comment-button">Post it</button>
                 </form>
               </div>
               <div class="box-comment-list">
                 <ul class="list-of-comment">
-                  <li class="comment-row">first comment</li>
-                  <li class="comment-row">second comment</li>
+                  <% if ( post.comments.length > 0) {%>
+                  <%post.comments.forEach(function(comment) { %>
+                  <li class="comment-row"> <%=comment%> </li>
+                  <%})%> <% } %>
                 </ul>
               </div>
             </div>

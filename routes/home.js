@@ -2,18 +2,18 @@ var express = require("express");
 var router = express.Router();
 const post_model = require("../models/post_model");
 const user_model = require("../models/user_model");
+const comment_model = require("../models/comment_model");
 const path = require("path");
 const jwt = require("jsonwebtoken");
 var cookie = require("cookie");
 
 router.get("/", async function (req, res, next) {
-  const token = JSON.parse(cookie.parse(req.headers.cookie).token).jwt;
-  const decodedToken = jwt.verify(token, "RANDOM_TOKEN_SECRET");
-  let userId = decodedToken.userId;
-  let user = await user_model.findById(userId).exec();
-  let post = await post_model.find().sort({ date: -1 }).exec();
-  console.log(post);
-  res.render("home", { username: user.username, posts: post });
+  let post = await post_model
+    .find()
+    .sort({ date: -1 })
+    .populate({ path: "author", select: "username -_id" })
+    .exec();
+  res.render("home", { posts: post });
 });
 router.get("/data-base", function (req, res, next) {
   // res.render("dataBase");
@@ -32,10 +32,31 @@ router.post("/add_post", async function (req, res, next) {
     date: Date.now(),
     author: userId,
   });
+  let addAuthorToUser = await user_model.findOneAndUpdate(
+    { _id: userId },
+    { $push: { posts: postD._id } },
+    { new: true },
+  );
   res.redirect("/home");
 });
 router.get("/users", function (req, res, next) {
   res.render("users", {});
+});
+router.post("/comment", async function (req, res, next) {
+  const token = JSON.parse(cookie.parse(req.headers.cookie).token).jwt;
+  const decodedToken = jwt.verify(token, "RANDOM_TOKEN_SECRET");
+  let userId = decodedToken.userId;
+  const comment = await comment_model.create({
+    author: userId,
+    comment: req.body.comment,
+    date: Date.now(),
+  });
+  let addCommentToPost = await post_model.findOneAndUpdate(
+    { author: userId },
+    { $push: { comments: req.body.comment } },
+    { new: true },
+  );
+  res.status(200).redirect("/home");
 });
 
 module.exports = router;

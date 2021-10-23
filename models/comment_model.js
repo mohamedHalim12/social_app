@@ -7,7 +7,6 @@ const commentShema = mongoose.Schema({
   date: Date,
   reaction: {
     type: mongoose.Schema.Types.ObjectId,
-    required: true,
     ref: reaction_model,
   },
 });

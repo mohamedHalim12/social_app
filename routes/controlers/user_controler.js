@@ -6,12 +6,23 @@ const ms = require("ms");
 exports.signup = async (req, res, next) => {
   try {
     let hash = await bcrypt.hash(req.body.password, 10);
+    console.log(req.body);
     const user = await user_model.create({
       username: req.body.username,
       firstname: req.body.firstname,
       lastname: req.body.lastname,
       email: req.body.email,
       password: hash,
+    });
+    let userExixt = await user_model.findOne({ email: req.body.email }).exec();
+    let token = jwt.sign({ userId: user._id }, "RANDOM_TOKEN_SECRET", {
+      expiresIn: "24h",
+    });
+    let tokenJson = JSON.stringify({ jwt: token });
+    res.cookie("token", tokenJson, {
+      maxAge: ms("1d"),
+      httpOnly: true,
+      secure: false,
     });
 
     res.redirect("/home");
